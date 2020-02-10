@@ -1,3 +1,5 @@
+// produce synthetic datasets for assessing HyperTraPS performance
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +14,7 @@ int main(void)
 
   char fstr[100];
   
-  // default synthetic case
+  // default synthetic case -- single pathway, can perturb if required
   for(k = 0; k < 3; k++)
     {
       sprintf(fstr, "synth-0-%i.txt", k);
@@ -29,7 +31,7 @@ int main(void)
       fclose(fp);
     }
     
-  // some features are systematically undersampled
+  // some features are systematically undersampled (10%, 20%, 40% probability of missing an observation)
   for(k = 0; k < 3; k++)
     {
       sprintf(fstr, "synth-1.1-%i.txt", k);
@@ -85,6 +87,7 @@ int main(void)
     }
 		
   // one set of organisms evolves differently
+  // here we produce one dataset that is the amalgamated set of observations and two others that are each set individually 
   sprintf(fstr, "synth-2.txt");
   fp = fopen(fstr, "w");
   sprintf(fstr, "synth-2.1.txt");

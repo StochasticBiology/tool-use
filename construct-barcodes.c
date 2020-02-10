@@ -9,6 +9,7 @@
 #define LEN 200
 #define MAXL 1000
 
+// apply parsimony to reconstruct ancestral states
 void Construct(int *dest, int *s1, int *s2, int L)
 {
   int i;
@@ -17,6 +18,7 @@ void Construct(int *dest, int *s1, int *s2, int L)
     dest[i] = (s1[i] == 1 && s2[i] == 1 ? 1 : 0);
 }
 
+// read tree in (old) NCBI format
 void ReadTreeNCBI(char *names, int *n, int *src, int *dest, int *nc, char *fstr)
 {
   FILE *fp;
@@ -45,29 +47,31 @@ void ReadTreeNCBI(char *names, int *n, int *src, int *dest, int *nc, char *fstr)
 
   while(!feof(fp))
     {
+      // read line in file
+      // get level as number of "+" characters
       fgets(str, 1000, fp);
       if(feof(fp)) break;
       ref++;
       level = 0;
       for(i = 0; str[i] == '+' || str[i] == ' '; i++) level += (str[i] == '+');
+
+      // get name of node
       j = 0; for(; str[i] != '\n'; i++) names[ref*LEN+(j++)] = str[i];
       names[ref*LEN+j-1] = '\0';
-      //  fprintf(fp2, "%i %i %s", ref, level, &str[i]);
+
+      // construct links according to relative levels
       lastlevel[level] = ref;
       if(level > 0)
 	{
 	  dest[*nc] = ref;
 	  src[*nc] = lastlevel[level-1];
 	  (*nc)++;
-	  //  fprintf(fp1, "%i %i\n", ref, lastlevel[level-1]);
 	}
     }
   *n = ref;
   fclose(fp);
-  //  fclose(fp1);
-  //fclose(fp2);
-  // output
 
+  // output names and connections
   for(i = 1; i < *n; i++)
     fprintf(fpout1, "%s\n", &names[LEN*i]);
   for(i = 0; i < *nc; i++)
@@ -78,6 +82,7 @@ void ReadTreeNCBI(char *names, int *n, int *src, int *dest, int *nc, char *fstr)
   fclose(fpout1);
   fclose(fpout2);
 
+  // output DOT format for plotting if required
   sprintf(str, "%s.dot", fstr);
   fpout1 = fopen(str, "w");
   fprintf(fpout1, "digraph D {\n  node [shape=plaintext]\n");
@@ -87,67 +92,7 @@ void ReadTreeNCBI(char *names, int *n, int *src, int *dest, int *nc, char *fstr)
   fclose(fpout1);
 }
 
-void ReadTreeNewick(char *names, int *n, int *src, int *dest, int *nc, char *fstr)
-{
-  int i, j, k; 
-  int start, end;
-  char str1[10000], str2[10000];
-  char ch;
-  int len;
-  int gap;
-  int ref, ref1, ref2;
-  FILE *fp;
-  char tree[10000];
-
-  // first read newick tree as string
-  fp = fopen(fstr, "r");
-  len = 0;
-  do{
-    ch = fgetc(fp);
-    if(!feof(fp)) tree[len++] = ch;
-  }while(!feof(fp));
-  tree[len-1] = '\0';
-  fclose(fp);
-
-  // parse newick tree. from start to end, when a close-paren is encountered, back up to the preceding opener, store both names and their relationship, create a new node that is their ancestor, and replace the (..,..) identified with that node
-  printf("%s\n", tree); 
-  *n = 1; *nc = 0;
-  for(i = 0; tree[i] != '\0'; i++)
-    {
-      if(tree[i] == ')')
-	{
-	  end = i;
-	  for(j = i; tree[j] != '(' && j != 0; j--); start = j;
-	  k = 0; if(tree[j] == '(') j++; for(; tree[j] != ','; j++) str1[k++] = tree[j]; str1[k] = '\0';
-	  k = 0; j++; for(; tree[j] != ')'; j++) str2[k++] = tree[j]; str2[k] = '\0';
-	  if(atoi(str1) != 0) ref1 = atoi(str1); else 
-	    { sprintf(&names[LEN*(*n)], "%s", str1); (*n)++; ref1 = *n-1; }
-	  if(atoi(str2) != 0) ref2 = atoi(str2); else 
-	    { sprintf(&names[LEN*(*n)], "%s", str2); (*n)++; ref2 = *n-1; }
-	  sprintf(&names[LEN*(*n)], "%i", *n); (*n)++;
-	  src[*nc] = *n-1; dest[*nc] = ref1; (*nc)++;
-	  src[*nc] = *n-1; dest[*nc] = ref2; (*nc)++;
-	  sprintf(&tree[start], "%s", &names[LEN*(*n-1)]);
-	  gap = (end-start)-strlen(&names[LEN*(*n-1)]);
-	  for(k = start+strlen(&names[LEN*(*n-1)]); tree[k+gap] != '\0'; k++)
-	    tree[k] = tree[k+gap+1];
-	  tree[k] = '\0';
-	  printf("%s\n", tree); 
-	  i -= gap+1;
-	  for(j = 0; j < i; j++) printf(" ");
-	  printf("^\n");
-	}
-    }
-
-  // output
-  printf("\n{");
-  for(i = 1; i < *n; i++)
-    printf("\"%s\", ", &names[LEN*i]);
-  printf("}\n");
-  for(i = 0; i < *nc; i++)
-    printf("%i -> %i, ", src[i], dest[i]);
-}
-
+// get names of species for which we have observations
 void ReadSpecies(char *names, int *refs, int n, char *fstr)
 {
   FILE *fp;
@@ -167,6 +112,8 @@ void ReadSpecies(char *names, int *refs, int n, char *fstr)
   printf("I found the following indices in species file: (-1 = not found)\n");
   line = 0;
   for(i = 0; i < n; i++) refs[i] = -1;
+
+  // look for species names in our tree
   while(!feof(fp))
     {
       fgets(str, 200, fp);
@@ -180,7 +127,6 @@ void ReadSpecies(char *names, int *refs, int n, char *fstr)
     }
   for(i = 0; i < n; i++)
     {
-      //if(refs[i] == -1) sprintf(&names[LEN*i], "%i", ancestor++);
       printf("%s %i\n", &names[LEN*i], refs[i]);
     }
   for(i = 0; i < line; i++)
@@ -198,6 +144,7 @@ void ReadSpecies(char *names, int *refs, int n, char *fstr)
   fclose(fp);
 }
 
+// read sets of observations corresponding to leaves on the tree
 void ReadTraits(int *matrix, char *fstr, int *L, int n)
 {
   FILE *fp;
@@ -213,6 +160,8 @@ void ReadTraits(int *matrix, char *fstr, int *L, int n)
       printf("Couldn't read trait file %s\n", fstr);
       exit(0);
     }
+
+  // identify number of features
   count = 0;
   do{
     ch = fgetc(fp);
@@ -226,7 +175,8 @@ void ReadTraits(int *matrix, char *fstr, int *L, int n)
     }
   else printf("I found %i traits\n", count);
   rewind(fp);
-  
+
+  // read in set of observations
   *L = count;
   line = 0;
   while(!feof(fp))
@@ -265,17 +215,20 @@ int main(int argc, char *argv[])
       printf("Usage: ./construct-barcodes.ce [species names] [traits] [common tree]\n");
       return 0;
     }
-  
+
+  // allocate memory for various structures
   matrix = (int*)malloc(sizeof(int)*10000*MAXL);
   traits = (int*)malloc(sizeof(int)*10000*MAXL);
   names = (char*)malloc(sizeof(char)*10000*LEN);
   src = (int*)malloc(sizeof(int)*1000000);
   dest = (int*)malloc(sizeof(int)*1000000);
 
+  // read in tree structure, list of species, and feature lists
   ReadTreeNCBI(names, &n, src, dest, &nc, argv[3]);
   ReadSpecies(names, refs, n, argv[1]);
   ReadTraits(matrix, argv[2], &L, n);
-  
+
+  // identify leaves
   do{
     change = 0;
     for(j = 1; j < n; j++)
@@ -376,6 +329,7 @@ int main(int argc, char *argv[])
       }
   }while(change == 1);
 
+  // output results
   sprintf(fstr, "%s-names.txt", argv[2]);
   fp1 = fopen(fstr, "w");
   for(i = 1; i < n; i++)

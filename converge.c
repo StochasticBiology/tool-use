@@ -1,4 +1,7 @@
+// compute Gellman-Rubin convergence diagnostic for MCMC chains
+// useful reference:
 // https://astrostatistics.psu.edu/RLectures/diagnosticsMCMC.pdf
+// at the moment everything is sloppily output to stdout -- could be streamlined
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -38,12 +41,17 @@ int main(int argc, char *argv[])
   
   theta = (double*)malloc(sizeof(double)*MAXN*MAXM);
 
+  // whether to skip entries, and how many
   skipper = 1;
+
+  m = 3;
+
+  // loop through parameters
   for(param = 0; param < 400; param++)
     {
       printf("Starting %i\n", param);
 
-      m = 3;
+      // read in samples from each file
       for(j = 0; j < m; j++)
 	{
 	  fp = fopen(argv[j+1], "r");
@@ -65,9 +73,11 @@ int main(int argc, char *argv[])
 	  fclose(fp);
 	  printf("\nRead %i samples\n\n", i);
 	}
-  
+
+      // how many samples to compute statistics over?
       n = 7500;
 
+      // start computing statistics within and between chains
       meanmeantheta = 0;
       for(j = 0; j < m; j++)
 	{
@@ -86,6 +96,7 @@ int main(int argc, char *argv[])
 	}
       meanmeantheta /= m;
 
+      // compute overall summary statistics
       W = B = 0;
       for(j = 0; j < m; j++)
 	{
@@ -95,6 +106,7 @@ int main(int argc, char *argv[])
       W /= m;
       B *= ((double)n/(m-1));
 
+      // compute GR statistic
       varvartheta = (1.-1./n)*W + 1./n*B;
       Rhat = sqrt(varvartheta/W);
 
