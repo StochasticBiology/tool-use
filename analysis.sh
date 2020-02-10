@@ -1,3 +1,5 @@
+# runs analysis of HyperTraPS posteriors
+
 gcc -o3 posteriors.c -lm -o posteriors.ce
 
 # total dataset
@@ -43,17 +45,20 @@ gcc -o3 posteriors.c -lm -o posteriors.ce
 ./posteriors.ce 0 synth-2.1.txt-posterior-0-1-3-5.txt > analysis-4.14.txt &
 ./posteriors.ce 0 synth-2.2.txt-posterior-0-1-3-5.txt > analysis-4.15.txt &
 
-
+# make a script allowing the automatic replacement of anonymous features in these outputs with the real tool mode names
 more Data/modes.txt | awk 'BEGIN{n=0;}{printf("sed -i \"s/feature_%i /%s /g\" *process\n", n++, $0);}' > modescr.sh
 chmod +x modescr.sh
 ./modescr.sh
 
+# get means of inferred posteriors for subsampled data
 chmod +x get-means.sh
 ./get-means.sh
 
+# run convergence diagnostics
 chmod +x convergence.sh
 ./convergence.sh
 
+# compute predictions of hidden and future features
 chmod +x predict.sh
 ./predict.sh
 
