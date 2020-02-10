@@ -1,3 +1,7 @@
+# gets the mean inferred acquisition ordering for each feature from a subset of posterior analyses
+
+# these are output by posteriors.c so this script rather messily extracts the corresponding quantities and removes annotations
+
 tail -n1 ../total-observations.txt-trans.txt-posterior-0-1-3-5.txt.process | sed 's/#//g' | sed 's/)//g' | sed 's/,/\n/g' | sed 's/feature_//g' > means-total.txt
 
 tail -n1 ../sample-observations-0.1-1-trans.txt-posterior-0-1-3-5.txt.process | sed 's/#//g' | sed 's/)//g' | sed 's/,/\n/g' | sed 's/feature_//g' > means-sample-0.1-1.txt
