@@ -1,0 +1,51 @@
+Bilateria
+++Deuterostomia
+| \-Tetrapoda
+|   +-Amniota
+|   | ++Mammalia
+|   | | \-Eutheria
+|   | |   ++Afrotheria
+|   | |   | \-Elephantidae
+|   | |   \-Boreoeutheria
+|   | |     +-Laurasiatheria
+|   | |     | +-Artiodactyla
+|   | |     | \-Carnivora
+|   | |     \-Euarchontoglires
+|   | |       +-Glires
+|   | |       | \-Rodentia
+|   | |       \-Primates
+|   | |         +-Haplorrhini
+|   | |         | \-Simiiformes
+|   | |         |   +-Catarrhini
+|   | |         |   | +-Hominoidea
+|   | |         |   | | +-Hominidae
+|   | |         |   | | | ++Ponginae
+|   | |         |   | | | | \-Pongo pygmaeus
+|   | |         |   | | | \-Homininae
+|   | |         |   | | |   +-Pan
+|   | |         |   | | |   | +-Pan troglodytes
+|   | |         |   | | |   | \-Pan paniscus
+|   | |         |   | | |   \-Gorilla
+|   | |         |   | | |     \-Gorilla gorilla
+|   | |         |   | | \-Hylobatidae
+|   | |         |   | \-Cercopithecoidea
+|   | |         |   |   \-Cercopithecidae
+|   | |         |   \-Platyrrhini
+|   | |         \+Strepsirrhini
+|   | |           \-Lemuridae
+|   | \+Sauropsida
+|   |   \-Aves
+|   \-Amphibia
+\-Protostomia
+  ++Ecdysozoa
+  | \-Arthropoda
+  |   +-Chelicerata
+  |   | \-Arachnida
+  |   \-Mandibulata
+  |     \-Pancrustacea
+  |       +-Hexapoda
+  |       | \-Insecta
+  |       \-Crustacea
+  \+Spiralia
+    \-Gastropoda
+-----------------------------------

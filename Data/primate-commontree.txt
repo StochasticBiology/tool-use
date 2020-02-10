@@ -1,0 +1,21 @@
+Primates
++-Haplorrhini
+| \-Simiiformes
+|   +-Catarrhini
+|   | +-Hominoidea
+|   | | +-Hominidae
+|   | | | ++Ponginae
+|   | | | | \-Pongo pygmaeus
+|   | | | \-Homininae
+|   | | |   +-Pan
+|   | | |   | +-Pan troglodytes
+|   | | |   | \-Pan paniscus
+|   | | |   \-Gorilla
+|   | | |     \-Gorilla gorilla
+|   | | \-Hylobatidae
+|   | \-Cercopithecoidea
+|   |   \-Cercopithecidae
+|   \-Platyrrhini
+\+Strepsirrhini
+  \-Lemuridae
+-----------------------------------

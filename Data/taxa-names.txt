@@ -1,0 +1,22 @@
+Pan troglodytes
+Pan paniscus
+Pongo pygmaeus
+Gorilla gorilla
+Platyrrhini
+Cercopithecidae
+Hylobatidae
+Lemuridae
+Carnivora
+Cetacea
+Elephantidae
+Artiodactyla
+Rodentia
+Amphibia
+Actinopterygii
+Aves
+Insecta
+Arachnida
+Crustacea
+Gastropoda
+Cephalopoda
+Echinodermata

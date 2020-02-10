@@ -1,0 +1,59 @@
+Bilateria
++-Deuterostomia
+| ++Chordata
+| | \-Euteleostomi
+| |   ++Sarcopterygii
+| |   | \-Tetrapoda
+| |   |   +-Amniota
+| |   |   | ++Mammalia
+| |   |   | | \-Eutheria
+| |   |   | |   ++Afrotheria
+| |   |   | |   | \-Elephantidae
+| |   |   | |   \-Boreoeutheria
+| |   |   | |     +-Laurasiatheria
+| |   |   | |     | +-Carnivora
+| |   |   | |     | \+Artiodactyla
+| |   |   | |     |   \-Cetacea
+| |   |   | |     \-Euarchontoglires
+| |   |   | |       +-Glires
+| |   |   | |       | \-Rodentia
+| |   |   | |       \-Primates
+| |   |   | |         +-Haplorrhini
+| |   |   | |         | \-Simiiformes
+| |   |   | |         |   +-Catarrhini
+| |   |   | |         |   | +-Hominoidea
+| |   |   | |         |   | | +-Hominidae
+| |   |   | |         |   | | | ++Ponginae
+| |   |   | |         |   | | | | \-Pongo pygmaeus
+| |   |   | |         |   | | | \-Homininae
+| |   |   | |         |   | | |   +-Pan
+| |   |   | |         |   | | |   | +-Pan troglodytes
+| |   |   | |         |   | | |   | \-Pan paniscus
+| |   |   | |         |   | | |   \-Gorilla
+| |   |   | |         |   | | |     \-Gorilla gorilla
+| |   |   | |         |   | | \-Hylobatidae
+| |   |   | |         |   | \-Cercopithecoidea
+| |   |   | |         |   |   \-Cercopithecidae
+| |   |   | |         |   \-Platyrrhini
+| |   |   | |         \+Strepsirrhini
+| |   |   | |           \-Lemuridae
+| |   |   | \+Sauropsida
+| |   |   |   \-Aves
+| |   |   \-Amphibia
+| |   \-Actinopterygii
+| \-Echinodermata
+\-Protostomia
+  ++Ecdysozoa
+  | \-Arthropoda
+  |   +-Chelicerata
+  |   | \-Arachnida
+  |   \-Mandibulata
+  |     \-Pancrustacea
+  |       +-Hexapoda
+  |       | \-Insecta
+  |       \-Crustacea
+  \+Spiralia
+    \-Mollusca
+      +-Cephalopoda
+      \-Gastropoda
+-----------------------------------

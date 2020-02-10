@@ -1,0 +1,38 @@
+Bilateria
++-Deuterostomia
+| ++Chordata
+| | \-Euteleostomi
+| |   ++Sarcopterygii
+| |   | \-Tetrapoda
+| |   |   +-Amniota
+| |   |   | ++Mammalia
+| |   |   | | \-Eutheria
+| |   |   | |   ++Afrotheria
+| |   |   | |   | \-Elephantidae
+| |   |   | |   \-Boreoeutheria
+| |   |   | |     ++Euarchontoglires
+| |   |   | |     | \-Rodentia
+| |   |   | |     \-Laurasiatheria
+| |   |   | |       +-Carnivora
+| |   |   | |       \+Artiodactyla
+| |   |   | |         \-Cetacea
+| |   |   | \+Sauropsida
+| |   |   |   \-Aves
+| |   |   \-Amphibia
+| |   \-Actinopterygii
+| \-Echinodermata
+\-Protostomia
+  ++Ecdysozoa
+  | \-Arthropoda
+  |   +-Chelicerata
+  |   | \-Arachnida
+  |   \-Mandibulata
+  |     \-Pancrustacea
+  |       +-Hexapoda
+  |       | \-Insecta
+  |       \-Crustacea
+  \+Spiralia
+    \-Mollusca
+      +-Cephalopoda
+      \-Gastropoda
+-----------------------------------
