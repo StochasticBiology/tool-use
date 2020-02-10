@@ -54,3 +54,6 @@ chmod +x get-means.sh
 chmod +x convergence.sh
 ./convergence.sh
 
+chmod +x predict.sh
+./predict.sh
+
