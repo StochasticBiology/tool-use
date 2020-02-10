@@ -1,3 +1,6 @@
+# this script parses the source data output of NCBI's Common Taxonomy Tree to produce useable phylogenies, then uses these to create lists of observed transitions
+
+# get phylogenies and convert to required format
 ./updatetree-linux.sh Data/all-commontree.txt > all-commontree-old.txt
 ./updatetree-linux.sh Data/primate-commontree.txt > primate-commontree-old.txt
 ./updatetree-linux.sh Data/nonprimate-commontree.txt > nonprimate-commontree-old.txt
@@ -5,8 +8,10 @@
 ./updatetree-linux.sh Data/nonaquatic-commontree.txt > nonaquatic-commontree-old.txt
 ./updatetree-linux.sh Data/bird-commontree.txt > bird-commontree-old.txt
 
+# compile phylogeny->barcodes code
 gcc construct-barcodes.c -o construct-barcodes.ce
 
+# apply code to each biological subset
 ./construct-barcodes.ce total-names.txt wild-observations.txt all-commontree-old.txt > wild.tmp
 ./construct-barcodes.ce total-names.txt total-observations.txt all-commontree-old.txt > total.tmp
 ./construct-barcodes.ce primate-names.txt primate-total-observations.txt primate-commontree-old.txt > primate-total.tmp
@@ -19,6 +24,7 @@ gcc construct-barcodes.c -o construct-barcodes.ce
 ./construct-barcodes.ce nonaquatic-names.txt nonaquatic-wild-observations.txt nonaquatic-commontree-old.txt > nonaquatic-wild.tmp
 ./construct-barcodes.ce bird-names.txt bird-observations.txt bird-commontree-old.txt > bird.tmp
 
+# apply code to subsampled data
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-1.txt all-commontree-old.txt > sample-0.1-1.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-2.txt all-commontree-old.txt > sample-0.1-2.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-3.txt all-commontree-old.txt > sample-0.1-3.tmp
