@@ -1,3 +1,5 @@
+# runs long HyperTraPS simulations for all subsets of the data we're interested in
+
 gcc -o3 hypertraps-dt.c -lm -o hypertraps-dt.ce
 
 ./hypertraps-dt.ce total-observations.txt-trans.txt 1 3 5 0 > total-run1.tmp &
