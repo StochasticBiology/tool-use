@@ -1,4 +1,3 @@
-cp Code/* .
 chmod +x *.sh
 
 ./subset.sh
