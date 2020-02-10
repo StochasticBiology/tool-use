@@ -1,6 +1,9 @@
+# create synthetic datasets, and run HyperTraPS
+
 gcc synth.c -o synth.ce
 ./synth.ce
 
+gcc -o3 hypertraps-dt.c -lm -o hypertraps-dt.ce
 ./hypertraps-dt.ce synth-0-0.txt 1 3 5 0 > synth0-0-run1.tmp &
 ./hypertraps-dt.ce synth-0-1.txt 1 3 5 0 > synth0-1-run1.tmp &
 ./hypertraps-dt.ce synth-0-2.txt 1 3 5 0 > synth0-2-run1.tmp &
