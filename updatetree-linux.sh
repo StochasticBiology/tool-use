@@ -1,1 +1,2 @@
+# this script takes a modern (2020) "text tree" exported from NCBI's Common Taxonomy Tree and recasts it in an older format used by followup code
 sed -E 's/\+\-/\+ /g' $1 | sed -E 's/\|/\+/g' | sed -E 's/\\\-/\+ /g' | sed -E 's/^ /\+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+  /\+ \+/g' | sed -E 's/\+\+/\+ /g' | sed -E 's/ \\\+/ \+ /g' | sed -E 's/\\\+/\+ /g'
