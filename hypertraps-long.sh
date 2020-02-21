@@ -19,17 +19,17 @@ gcc -o3 hypertraps-dt.c -lm -o hypertraps-dt.ce
 ./hypertraps-dt.ce total-observations.txt-trans.txt 2 3 5 0 > total-run2.tmp &
 ./hypertraps-dt.ce total-observations.txt-trans.txt 3 3 5 0 > total-run3.tmp &
 
-./hypertraps-dt.ce sample-observations-0.1-1-trans.txt 1 3 5 0 > sample-0.1-1-run.tmp &
-./hypertraps-dt.ce sample-observations-0.1-2-trans.txt 1 3 5 0 > sample-0.1-2-run.tmp &
-./hypertraps-dt.ce sample-observations-0.1-3-trans.txt 1 3 5 0 > sample-0.1-3-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-1-trans.txt 1 3 5 0 > sample-0.2-1-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-2-trans.txt 1 3 5 0 > sample-0.2-2-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-3-trans.txt 1 3 5 0 > sample-0.2-3-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-1.txt-trans.txt 1 3 5 0 > sample-0.1-1-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-2.txt-trans.txt 1 3 5 0 > sample-0.1-2-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-3.txt-trans.txt 1 3 5 0 > sample-0.1-3-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-1.txt-trans.txt 1 3 5 0 > sample-0.2-1-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-2.txt-trans.txt 1 3 5 0 > sample-0.2-2-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-3.txt-trans.txt 1 3 5 0 > sample-0.2-3-run.tmp &
 
-./hypertraps-dt.ce sample-observations-0.1-4-trans.txt 1 3 5 0 > sample-0.1-4-run.tmp &
-./hypertraps-dt.ce sample-observations-0.1-5-trans.txt 1 3 5 0 > sample-0.1-5-run.tmp &
-./hypertraps-dt.ce sample-observations-0.1-6-trans.txt 1 3 5 0 > sample-0.1-6-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-4-trans.txt 1 3 5 0 > sample-0.2-4-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-5-trans.txt 1 3 5 0 > sample-0.2-5-run.tmp &
-./hypertraps-dt.ce sample-observations-0.2-6-trans.txt 1 3 5 0 > sample-0.2-6-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-4.txt-trans.txt 1 3 5 0 > sample-0.1-4-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-5.txt-trans.txt 1 3 5 0 > sample-0.1-5-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-6.txt-trans.txt 1 3 5 0 > sample-0.1-6-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-4.txt-trans.txt 1 3 5 0 > sample-0.2-4-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-5.txt-trans.txt 1 3 5 0 > sample-0.2-5-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-6.txt-trans.txt 1 3 5 0 > sample-0.2-6-run.tmp &
 

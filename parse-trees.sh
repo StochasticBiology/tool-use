@@ -24,11 +24,18 @@ gcc construct-barcodes.c -o construct-barcodes.ce
 ./construct-barcodes.ce nonaquatic-names.txt nonaquatic-wild-observations.txt nonaquatic-commontree-old.txt > nonaquatic-wild.tmp
 ./construct-barcodes.ce bird-names.txt bird-observations.txt bird-commontree-old.txt > bird.tmp
 
-# apply code to subsampled data
+# apply code to randomly perturbed data
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-1.txt all-commontree-old.txt > sample-0.1-1.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-2.txt all-commontree-old.txt > sample-0.1-2.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.1-3.txt all-commontree-old.txt > sample-0.1-3.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.2-1.txt all-commontree-old.txt > sample-0.2-1.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.2-2.txt all-commontree-old.txt > sample-0.2-2.tmp
 ./construct-barcodes.ce total-names.txt sample-observations-0.2-3.txt all-commontree-old.txt > sample-0.2-3.tmp
+
+./construct-barcodes.ce total-names.txt sample-observations-0.1-4.txt all-commontree-old.txt > sample-0.1-4.tmp
+./construct-barcodes.ce total-names.txt sample-observations-0.1-5.txt all-commontree-old.txt > sample-0.1-5.tmp
+./construct-barcodes.ce total-names.txt sample-observations-0.1-6.txt all-commontree-old.txt > sample-0.1-6.tmp
+./construct-barcodes.ce total-names.txt sample-observations-0.2-4.txt all-commontree-old.txt > sample-0.2-4.tmp
+./construct-barcodes.ce total-names.txt sample-observations-0.2-5.txt all-commontree-old.txt > sample-0.2-5.tmp
+./construct-barcodes.ce total-names.txt sample-observations-0.2-6.txt all-commontree-old.txt > sample-0.2-6.tmp
 

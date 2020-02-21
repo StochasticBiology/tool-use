@@ -15,17 +15,17 @@ awk '{for(i=0;i<NF;i++) printf("0 "); printf("\n%s\n", $0);}' total-observations
 awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.1) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-1.txt
 awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.1) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-2.txt
 awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.1) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-3.txt
-awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.2) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-1.txt
+awk 'BEGIN{srand(11);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.2) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-1.txt
 awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.2) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-2.txt
 awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 1) {if(rand()>0.2) printf("1 "); else printf("0 ");} if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-3.txt
 
 # random new observations
-awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-4.txt
-awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-5.txt
-awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.1-6.txt
-awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-4.txt
-awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-5.txt
-awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");}} printf("\n");}' total-observations.txt > sample-observations-0.2-6.txt
+awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.1-4.txt
+awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.1-5.txt
+awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.1) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.1-6.txt
+awk 'BEGIN{srand(1);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.2-4.txt
+awk 'BEGIN{srand(2);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.2-5.txt
+awk 'BEGIN{srand(3);}{for(i=1;i<=NF;i++) {if($i == 0) {if(rand()>0.2) printf("0 "); else printf("1 ");} else printf("1 ");} printf("\n");}' total-observations.txt > sample-observations-0.2-6.txt
 
 # produce wild and total primate subsets
 awk 'BEGIN{n=1;}{if(n<=8) print $0; n++;}' total-observations.txt > primate-total-observations.txt
