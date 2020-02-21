@@ -1,0 +1,75 @@
+Deuterostomia
+++Chordata
+| \-Tetrapoda
+|   +-Amniota
+|   | ++Mammalia
+|   | | \-Eutheria
+|   | |   ++Afrotheria
+|   | |   | \-Elephantidae
+|   | |   \+Boreoeutheria
+|   | |     \-Catarrhini
+|   | |       +-Hominoidea
+|   | |       | +-Hominidae
+|   | |       | | ++Ponginae
+|   | |       | | | \-Pongo pygmaeus
+|   | |       | | \-Homininae
+|   | |       | |   +-Pan
+|   | |       | |   | +-Pan troglodytes
+|   | |       | |   | \-Pan paniscus
+|   | |       | |   \-Gorilla
+|   | |       | |     \-Gorilla gorilla
+|   | |       | \-Hylobatidae
+|   | |       \-Cercopithecoidea
+|   | |         \-Cercopithecidae
+|   | \+Sauropsida
+|   |   \-Neognathae
+|   |     +-Accipitriformes
+|   |     | \-Accipitridae
+|   |     +-Strigiformes
+|   |     | \-Strigidae
+|   |     +-Psittaciformes
+|   |     | +-Cacatuidae
+|   |     | \-Psittacidae
+|   |     +-Piciformes
+|   |     | +-Ramphastidae
+|   |     | \-Picidae
+|   |     +-Passeriformes
+|   |     | +-Thraupidae
+|   |     | +-Passeroidea
+|   |     | | \-Icteridae
+|   |     | +-Sittidae
+|   |     | +-Muscicapidae
+|   |     | +-Turdidae
+|   |     | +-Sylvioidea
+|   |     | | \-Timaliidae
+|   |     | +-Sturnidae
+|   |     | +-Ptilonorhynchidae
+|   |     | +-Paridae
+|   |     | \-Corvoidea
+|   |     |   +-Pachycephalidae
+|   |     |   | \-Daphoenositta
+|   |     |   +-Corvidae
+|   |     |   \-Corcoracidae
+|   |     +-Gruiformes
+|   |     | +-Eurypygidae
+|   |     | \-Gruidae
+|   |     ++Galloanserae
+|   |     | \-Megapodiidae
+|   |     +-Coraciiformes
+|   |     | +-Meropidae
+|   |     | +-Coraciidae
+|   |     | \-Alcedinidae
+|   |     +-Columbiformes
+|   |     | \-Columbidae
+|   |     +-Ciconiiformes
+|   |     | \-Ciconiidae
+|   |     +-Charadriiformes
+|   |     | +-Haematopodidae
+|   |     | +-Scolopacidae
+|   |     | \-Laridae
+|   |     \-Pelecaniformes
+|   |       +-Phalacrocoracidae
+|   |       \-Ardeidae
+|   \-Amphibia
+\-Echinodermata
+-----------------------------------

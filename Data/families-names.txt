@@ -1,0 +1,41 @@
+Accipitridae
+Strigidae
+Cacatuidae
+Psittacidae
+Ramphastidae
+Picidae
+Thraupidae
+Sittidae
+Muscicapidae
+Turdidae
+Sturnidae
+Ptilonorhynchidae
+Paridae
+Icteridae
+Pachycephalidae
+Timaliidae
+Daphoenositta
+Corvidae
+Corcoracidae
+Eurypygidae
+Gruidae
+Meropidae
+Coraciidae
+Alcedinidae
+Columbidae
+Ciconiidae
+Haematopodidae
+Scolopacidae
+Laridae
+Phalacrocoracidae
+Ardeidae
+Megapodiidae
+Pan troglodytes
+Pan paniscus
+Gorilla gorilla
+Pongo pygmaeus
+Hylobatidae
+Cercopithecidae
+Elephantidae
+Amphibia
+Echinodermata
