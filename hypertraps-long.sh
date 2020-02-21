@@ -26,3 +26,10 @@ gcc -o3 hypertraps-dt.c -lm -o hypertraps-dt.ce
 ./hypertraps-dt.ce sample-observations-0.2-2-trans.txt 1 3 5 0 > sample-0.2-2-run.tmp &
 ./hypertraps-dt.ce sample-observations-0.2-3-trans.txt 1 3 5 0 > sample-0.2-3-run.tmp &
 
+./hypertraps-dt.ce sample-observations-0.1-4-trans.txt 1 3 5 0 > sample-0.1-4-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-5-trans.txt 1 3 5 0 > sample-0.1-5-run.tmp &
+./hypertraps-dt.ce sample-observations-0.1-6-trans.txt 1 3 5 0 > sample-0.1-6-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-4-trans.txt 1 3 5 0 > sample-0.2-4-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-5-trans.txt 1 3 5 0 > sample-0.2-5-run.tmp &
+./hypertraps-dt.ce sample-observations-0.2-6-trans.txt 1 3 5 0 > sample-0.2-6-run.tmp &
+
