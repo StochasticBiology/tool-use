@@ -10,19 +10,19 @@ gcc -o3 posteriors.c -lm -o posteriors.ce
 ./posteriors.ce 0 wild-observations.txt-trans.txt-posterior-0-1-3-5.txt > analysis-2.2.txt &
 
 # perturbed observations
-./posteriors.ce 0 sample-observations-0.1-1-trans.txt-posterior-0-1-3-5.txt > analysis-3.11.txt &
-./posteriors.ce 0 sample-observations-0.1-2-trans.txt-posterior-0-1-3-5.txt > analysis-3.12.txt &
-./posteriors.ce 0 sample-observations-0.1-3-trans.txt-posterior-0-1-3-5.txt > analysis-3.13.txt &
-./posteriors.ce 0 sample-observations-0.2-1-trans.txt-posterior-0-1-3-5.txt > analysis-3.21.txt &
-./posteriors.ce 0 sample-observations-0.2-2-trans.txt-posterior-0-1-3-5.txt > analysis-3.22.txt &
-./posteriors.ce 0 sample-observations-0.2-3-trans.txt-posterior-0-1-3-5.txt > analysis-3.23.txt &
+./posteriors.ce 0 sample-observations-0.1-1.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.11.txt &
+./posteriors.ce 0 sample-observations-0.1-2.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.12.txt &
+./posteriors.ce 0 sample-observations-0.1-3.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.13.txt &
+./posteriors.ce 0 sample-observations-0.2-1.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.21.txt &
+./posteriors.ce 0 sample-observations-0.2-2.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.22.txt &
+./posteriors.ce 0 sample-observations-0.2-3.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.23.txt &
 
-./posteriors.ce 0 sample-observations-0.1-4-trans.txt-posterior-0-1-3-5.txt > analysis-3.14.txt &
-./posteriors.ce 0 sample-observations-0.1-5-trans.txt-posterior-0-1-3-5.txt > analysis-3.15.txt &
-./posteriors.ce 0 sample-observations-0.1-6-trans.txt-posterior-0-1-3-5.txt > analysis-3.16.txt &
-./posteriors.ce 0 sample-observations-0.2-4-trans.txt-posterior-0-1-3-5.txt > analysis-3.24.txt &
-./posteriors.ce 0 sample-observations-0.2-5-trans.txt-posterior-0-1-3-5.txt > analysis-3.25.txt &
-./posteriors.ce 0 sample-observations-0.2-6-trans.txt-posterior-0-1-3-5.txt > analysis-3.26.txt &
+./posteriors.ce 0 sample-observations-0.1-4.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.14.txt &
+./posteriors.ce 0 sample-observations-0.1-5.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.15.txt &
+./posteriors.ce 0 sample-observations-0.1-6.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.16.txt &
+./posteriors.ce 0 sample-observations-0.2-4.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.24.txt &
+./posteriors.ce 0 sample-observations-0.2-5.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.25.txt &
+./posteriors.ce 0 sample-observations-0.2-6.txt-trans.txt-posterior-0-1-3-5.txt > analysis-3.26.txt &
 
 # different classes
 ./posteriors.ce 0 aquatic-total-observations.txt-trans.txt-posterior-0-1-3-5.txt > analysis-5.11.txt &
