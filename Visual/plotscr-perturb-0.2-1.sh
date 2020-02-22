@@ -27,5 +27,5 @@ set bmargin at screen 0.7
 set tmargin at screen 0.95
 set ylabel "Mean\nordering"
 set key top left
-plot "means-total.txt" pt 7 lc rgbcolor "#CCCCCC" title "Original", "means-sample-0.2-1.txt" pt 1 lc rgbcolor "#FF8888" title "10% perturbations", "means-sample-0.2-2.txt" pt 1 lc rgbcolor "#FF8888" notitle, "means-sample-0.2-3.txt" pt 1 lc rgbcolor "#FF8888" notitle
+plot "means-total.txt" pt 7 lc rgbcolor "#CCCCCC" title "Original", "means-sample-0.2-1.txt" pt 1 lc rgbcolor "#FF8888" title "20% perturbations", "means-sample-0.2-2.txt" pt 1 lc rgbcolor "#FF8888" notitle, "means-sample-0.2-3.txt" pt 1 lc rgbcolor "#FF8888" notitle
 quit
