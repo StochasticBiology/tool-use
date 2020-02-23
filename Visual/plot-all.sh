@@ -12,7 +12,6 @@ gnuplot plotscr-primate-wild.sh
 gnuplot plotscr-bird.sh
 gnuplot plotscr-gr.sh
 gnuplot plotscr-synth-0.sh
-gnuplot plotscr-synth-1.sh
 gnuplot plotscr-synth-2.sh
 
 convert plotscr-perturb-0.1-1.svg plotscr-perturb-0.1-1.png
@@ -25,5 +24,4 @@ convert plotscr-primate-wild.svg plotscr-primate-wild.png
 convert plotscr-bird.svg plotscr-bird.png
 convert plotscr-gr.svg plotscr-gr.png
 convert plotscr-synth-0.svg plotscr-synth-0.png
-convert plotscr-synth-1.svg plotscr-synth-1.png
 convert plotscr-synth-2.svg plotscr-synth-2.png
