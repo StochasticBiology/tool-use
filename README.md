@@ -74,10 +74,10 @@ Fig 1 -- (data plot)
 Fig 2 -- plotscr-total.sh & plot-paths.nb
 Fig 3 -- plotscr-aquatic.sh, plotscr-primate.sh & plot-paths.nb
 Fig 4 -- plotscr-predictions.sh 
-Fig S1 -- plotscr-perturb-0.1.sh & plotscr-perturb-0.2.sh
+Fig S1 -- plotscr-perturb-0.1-1.sh, plotscr-perturb-0.1-2.sh, plotscr-perturb-0.2-1.sh, plotscr-perturb-0.2-2.sh
 Fig S2 -- plotscr-wild.sh
 Fig S3 -- plotscr-aquatic-wild.sh & plotscr-primate-wild.sh
 Fig S4 -- plotscr-bird.sh & (data plot)
 Fig S5 -- plotscr-gr.sh
-Fig S6 -- plotscr-synth-0.sh & plotscr-synth-1.sh
+Fig S6 -- plotscr-synth-0.sh 
 Fig S7 -- plotscr-synth-2.sh 
