@@ -10,7 +10,9 @@ The pipeline proceeds through five stages:
 4. Analysis of posteriors from HyperTraPS.
 5. Plotting results.
 
-demo.sh and wrapper.sh go through these stages for a simple demonstration case and the full project respectively. Demonstration case should take a few minutes (but the MCMC chains will likely not have converged). Full project should run overnight. Additionally, families.sh acts as a wrapper for the analysis of the family-level data.
+demo.sh and wrapper.sh go through these stages for a simple demonstration case and the full project respectively. Demonstration case should take a few minutes (but the MCMC chains will likely not have converged). Full project should run overnight. The full project involves several different numerical investigations which are launched as several parallel processes; the script can be adapted to run these investigations one-by-one (most straightfowardly, remove the & sigils from the set of commands invoked).
+
+families.sh acts as a wrapper for the analysis of the family-level data.
 
 clean.sh removes any outputs of inference simulations for housekeeping.
 
