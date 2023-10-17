@@ -351,6 +351,8 @@ int main(int argc, char *argv[])
   fp = fopen(fstr, "w");
   sprintf(fstr, "%s-changes.txt", argv[2]);
   fp1 = fopen(fstr, "w");
+  int datacounter = 0;
+  int flagprob;
   for(i = 0; i < nc; i++)
     {
       change = 0; ref1 = 0; ref2 = 0;
@@ -362,14 +364,25 @@ int main(int argc, char *argv[])
 	}
       if(change == 1)
 	{
+	  flagprob = 0;
 	  fprintf(fp1, "%i %i %i %i\n", src[i], dest[i], ref1, ref2);
-	  //  printf("Change from %s to %s\n", &names[LEN*src[i]], &names[LEN*dest[i]]);
+	  printf("Datapoint %i: Change from %s to %s\n", datacounter++, &names[LEN*src[i]], &names[LEN*dest[i]]);
 	  for(j = 0; j < L; j++)
+	    {
 	    fprintf(fp, "%i ", traits[L*src[i]+j]);
+	    printf("%i", traits[L*src[i]+j]);
+	    }
 	  fprintf(fp, "\n");
+	  printf("\n");
 	  for(j = 0; j < L; j++)
+	    {
 	    fprintf(fp, "%i ", traits[L*dest[i]+j]);
+	    printf("%i", traits[L*dest[i]+j]);
+	    if(traits[L*dest[i]+j] == 0 && traits[L*src[i]+j] == 1) flagprob = 1;
+	    }
 	  fprintf(fp, "\n");
+	  if(flagprob) printf("\n**** !!!!!!!!");
+	  printf("\n\n");
 	}
     }
   fclose(fp);
