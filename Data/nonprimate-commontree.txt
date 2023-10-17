@@ -14,8 +14,8 @@ Bilateria
 | |   |   | |     | \-Rodentia
 | |   |   | |     \-Laurasiatheria
 | |   |   | |       +-Carnivora
-| |   |   | |       \+Artiodactyla
-| |   |   | |         \-Cetacea
+| |   |   | |       +-Artiodactyla
+| |   |   | |       \-Cetacea
 | |   |   | \+Sauropsida
 | |   |   |   \-Aves
 | |   |   \-Amphibia

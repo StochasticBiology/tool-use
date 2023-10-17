@@ -12,8 +12,8 @@ Bilateria
 | |   |   | |   \-Boreoeutheria
 | |   |   | |     +-Laurasiatheria
 | |   |   | |     | +-Carnivora
-| |   |   | |     | \+Artiodactyla
-| |   |   | |     |   \-Cetacea
+| |   |   | |     | +-Artiodactyla
+| |   |   | |     | \-Cetacea
 | |   |   | |     \-Euarchontoglires
 | |   |   | |       +-Glires
 | |   |   | |       | \-Rodentia
